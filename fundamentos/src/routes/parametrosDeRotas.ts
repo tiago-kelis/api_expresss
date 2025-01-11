@@ -6,7 +6,7 @@ router.get("/frutas/:id", (req, res) => {
     const frutas = ["Maçã", "Banana", "Uva", "Melância"];
     const id = +req.params.id; 
     
-    if(id >= 0 && id < 4) {
+    if(id >= 0 && id < frutas.length) {
         res.status(200).send(frutas[id]);
     }
     res.status(204).send("deus errado");

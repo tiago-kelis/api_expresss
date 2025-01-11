@@ -16,6 +16,9 @@ const porta = 8080;
 //     next()    
 // })
 
+//midlleware para fazer requisições para o body
+app.use(express.urlencoded({extended: true}));
+
 app.use(RotasBase);
 app.use(RotasDiferentes);
 app.use("/produtos", RotasAninhadas);
